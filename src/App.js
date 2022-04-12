@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap';
-//3. Sau khi tải file staffs.jsx về bạn import dữ liệu vào App và truyền STAFFS vào component StaffList. Import { STAFFS } from './shared/staffs';
 import StaffList from './components/StaffList';
 import { STAFFS } from './shared/staffs';
 

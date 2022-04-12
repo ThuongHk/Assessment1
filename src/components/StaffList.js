@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, CardImg, CardTitle, CardBody, CardText } from "reactstrap";
 import dateFormat from "dateformat";
+import Columns from './Columns';
 
 
 class StaffList extends Component {
@@ -71,54 +72,7 @@ class StaffList extends Component {
         
        return (
       <div className="container">
-           <div className="row m-3">
-
-                <div className ='col-sm-2 col-md-2'>
-                <button
-                  onClick={() => this.numberColumns("col-md-2 mt-1")}
-                  className="btn btn-info mr-3"
-                >
-                  6 cột
-                </button>
-                </div>
-
-                <div className ='col-sm-2  col-md-2'>
-                <button
-                  onClick={() => this.numberColumns("col-md-3 mt-1")}
-                  className="btn btn-info mr-3"
-                >
-                  4 cột
-                </button>
-                </div>
-
-                <div className ='col-sm-2  col-md-2'>
-                <button
-                  onClick={() => this.numberColumns("col-md-4 mt-1")}
-                  className="btn btn-info mr-3"
-                >
-                  3 cột
-                </button>
-                </div>
-
-                <div className ='col-sm-2  col-md-2'>
-                <button
-                  onClick={() => this.numberColumns("col-md-6 mt-1")}
-                  className="btn btn-info mr-3"
-                >
-                  2 cột
-                </button>
-                </div>
-
-                <div className ='col-sm-2 col-md-2'>
-                <button
-                  onClick={() => this.numberColumns("col-md-12 mt-1")}
-                  className="btn btn-info mr-3"
-                >
-                  1 cột
-                </button>
-                </div>
-
-</div>
+           <Columns  onClickBtn={this.numberColumns} />
         <div className="row">{staffList}</div>
         <div className="row mt-5">
           {this.outputStaff(this.state.listStaffs)}
