@@ -11,9 +11,8 @@ class StaffList extends Component {
       listStaffs: null,
       columDefault: "col-12 col-md-6 col-lg-4 mt-3"
     };
-    this.selectStaff = this.selectStaff.bind(this);
-    this.numberColumns = this.numberColumns.bind(this);
-    this.outputStaff = this.outputStaff.bind(this);
+   
+    // this.outputStaff = this.outputStaff.bind(this);
     
   }
 
@@ -23,7 +22,7 @@ class StaffList extends Component {
     });
   }
 
-  numberColumns(col) {
+  numberColumns1(col) {
     this.setState({
       columDefault: col
     });
@@ -72,7 +71,7 @@ class StaffList extends Component {
         
        return (
       <div className="container">
-           <Columns  onClickBtn={this.numberColumns} />
+           <Columns  onClickBtn={(col)=>this.numberColumns1(col)} />
         <div className="row">{staffList}</div>
         <div className="row mt-5">
           {this.outputStaff(this.state.listStaffs)}
