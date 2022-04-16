@@ -3,13 +3,10 @@ import React, { Component } from 'react';
 class Columns extends Component {
     constructor(props) {
         super(props);
-    //    this.numberColumns = this.numberColumns.bind(this);
+   
     }
 
-
-    // numberColumns(col){
-    //     this.props.onClickBtn(col);
-    // }
+  
 
     render() {
         return (
